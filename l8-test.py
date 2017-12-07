@@ -27,7 +27,7 @@ def psnr(y_true, y_pred):
     mse=K.mean(mse)
     return 20 * K.log(1. / K.sqrt(mse)) / numpy.log(10)#Attention,if you normalization pixels ,you use 1 not 255
 
-def ssim(y_true, y_pred):#may be wrong
+def ssim(y_true, y_pred):
     K1 = 0.04
     K2 = 0.06
     mu_x = K.mean(y_pred)
